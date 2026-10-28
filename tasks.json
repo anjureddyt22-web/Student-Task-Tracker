@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Learn python basic today for 30 minutes and do practice",
+        "completed": false,
+        "created_at": "2026-10-28 19:12:02"
+    },
+    {
+        "id": 2,
+        "name": "learn ai for 2 hours",
+        "completed": false,
+        "created_at": "2026-10-28 19:12:50"
+    }
+]

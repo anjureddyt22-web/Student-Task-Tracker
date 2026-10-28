@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1 class="app-title">Student Task Tracker</h1>
+            <p class="app-subtitle">Organize your tasks with style</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="dashboard">
+                <div class="stat-card stat-total">
+                    <div class="stat-label">Total Tasks</div>
+                    <div class="stat-value" id="stat-total">0</div>
+                </div>
+                <div class="stat-card stat-completed">
+                    <div class="stat-label">Completed</div>
+                    <div class="stat-value" id="stat-completed">0</div>
+                </div>
+                <div class="stat-card stat-pending">
+                    <div class="stat-label">Pending</div>
+                    <div class="stat-value" id="stat-pending">0</div>
+                </div>
+            </section>
+
+            <section class="add-task-section">
+                <div class="card add-task-card">
+                    <h2 class="section-title">Add New Task</h2>
+                    <div class="add-task-form">
+                        <input type="text" id="taskInput" class="task-input" placeholder="Enter a task..." autocomplete="off">
+                        <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+                    </div>
+                    <p id="addTaskMsg" class="form-message"></p>
+                </div>
+            </section>
+
+            <section class="tasks-section">
+                <h2 class="section-title">Your Tasks</h2>
+                <div id="tasksList" class="tasks-list">
+                </div>
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">📝</div>
+                    <p class="empty-state-text">No tasks yet. Add one above to get started!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>&copy; 2026 Student Task Tracker</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
